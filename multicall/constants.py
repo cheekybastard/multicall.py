@@ -37,6 +37,7 @@ class Network(IntEnum):
     Cronos = 25
     Optimism = 10
     OptimismKovan = 69
+    OptimismGoerli = 420
 
 MULTICALL_ADDRESSES: Dict[int,str] = {
     Network.Mainnet: '0xeefBa1e63905eF1D7ACbA5a8513c70307C1cE441',
@@ -52,6 +53,7 @@ MULTICALL_ADDRESSES: Dict[int,str] = {
     Network.Cronos: '0x5e954f5972EC6BFc7dECd75779F10d848230345F',
     Network.Optimism: '0x187C0F98FEF80E87880Db50241D40551eDd027Bf',
     Network.OptimismKovan: '0x2DC0E2aa608532Da689e89e237dF582B783E552C',
+    Network.OptimismGoerli: '0xC8315CC7DCDF57476a8a1D184505845d52711024',
 }
 
 MULTICALL2_ADDRESSES: Dict[int,str] = {
@@ -71,6 +73,7 @@ MULTICALL2_ADDRESSES: Dict[int,str] = {
     Network.Cronos: '0x5e954f5972EC6BFc7dECd75779F10d848230345F',
     Network.Optimism: '0x2DC0E2aa608532Da689e89e237dF582B783E552C',
     Network.OptimismKovan: '0x2DC0E2aa608532Da689e89e237dF582B783E552C',
+    Network.OptimismGoerli: '0x7918f37b683406427d00B3745154C5c5B9336f0C',
 }
 
 # With default AsyncBaseProvider settings, some dense calls will fail
