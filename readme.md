@@ -1,3 +1,5 @@
+pip install git+https://github.com/cheekybastard/multicall.py.git@6175201d2ca26ca7f098f80fc1c0c8320e3dc16c
+
 # multicall.py
 
 python interface for makerdao's [multicall](https://github.com/makerdao/multicall) and a port of [multicall.js](https://github.com/makerdao/multicall.js)
