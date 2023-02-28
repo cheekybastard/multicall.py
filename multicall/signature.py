@@ -1,6 +1,7 @@
 from typing import Any, List, Optional, Tuple
 
-from eth_abi import decode_single, encode_single
+# from eth_abi import decode_single, encode_single
+from eth_abi import encode
 from eth_typing.abi import Decodable
 from eth_utils import function_signature_to_4byte_selector
 
@@ -36,7 +37,9 @@ class Signature:
         self.fourbyte = function_signature_to_4byte_selector(self.function)
 
     def encode_data(self, args: Optional[Any] = None) -> bytes:
-        return self.fourbyte + encode_single(self.input_types, args) if args else self.fourbyte
+        # return self.fourbyte + encode_single(self.input_types, args) if args else self.fourbyte
+        return self.fourbyte + encode(self.input_types, args) if args else self.fourbyte
 
     def decode_data(self, output: Decodable) -> Any:
-        return decode_single(self.output_types, output)
+        # return decode_single(self.output_types, output)
+        return encode(self.output_types, output)
